@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="%BASE_URL%ala-siete.svg" />
+  <title>Ala Siete — Archivo Aeronáutico</title>
+  <meta name="author" content="Ala Siete" />
+  <meta name="description" content="Historia, diseño e ingeniería de aviación militar." />
+  <meta name="theme-color" content="#65704f" />
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) {
+          t = matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+        }
+        document.documentElement.setAttribute('data-bs-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

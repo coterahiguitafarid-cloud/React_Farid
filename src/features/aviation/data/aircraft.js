@@ -1,0 +1,83 @@
+const imageDirectory = `${import.meta.env.BASE_URL}imagenes/`
+
+const countryImages = {
+    'Estados Unidos': `${imageDirectory}estadosunidos.jpg`,
+    'Reino Unido': `${imageDirectory}reinounido.jpg`,
+    'Unión Soviética': `${imageDirectory}union%20sovietica.jpg`,
+    Francia: `${imageDirectory}principal.jpg`,
+}
+
+export const aircraft = [
+    {
+        id: 'f-16',
+        name: 'F-16 Fighting Falcon',
+        country: 'Estados Unidos',
+        era: '1970s',
+        category: 'Caza ligero',
+        image: countryImages['Estados Unidos'],
+        summary: 'Un diseño compacto que popularizó el concepto de caza ligero y ágil.',
+    },
+    {
+        id: 'spitfire',
+        name: 'Supermarine Spitfire',
+        country: 'Reino Unido',
+        era: '1930s',
+        category: 'Caza histórico',
+        image: countryImages['Reino Unido'],
+        summary: 'Reconocible por su ala elíptica y su lugar en la historia de la aviación.',
+    },
+    {
+        id: 'mig-21',
+        name: 'MiG-21',
+        country: 'Unión Soviética',
+        era: '1950s',
+        category: 'Interceptor',
+        image: countryImages['Unión Soviética'],
+        summary: 'Un avión supersónico de silueta inconfundible y amplia difusión internacional.',
+    },
+    {
+        id: 'f-14',
+        name: 'F-14 Tomcat',
+        country: 'Estados Unidos',
+        era: '1970s',
+        category: 'Caza embarcado',
+        image: countryImages['Estados Unidos'],
+        summary: 'Famoso por sus alas de geometría variable y su servicio desde portaaviones.',
+    },
+    {
+        id: 'mirage-iii',
+        name: 'Dassault Mirage III',
+        country: 'Francia',
+        era: '1950s',
+        category: 'Caza delta',
+        image: countryImages.Francia,
+        summary: 'Un referente de la ingeniería francesa con ala delta y perfil supersónico.',
+    },
+    {
+        id: 'harrier',
+        name: 'Hawker Siddeley Harrier',
+        country: 'Reino Unido',
+        era: '1960s',
+        category: 'Despegue vertical',
+        image: countryImages['Reino Unido'],
+        summary: 'Un avión singular por su capacidad de despegue corto y aterrizaje vertical.',
+    },
+    {
+        id: 'f-4',
+        name: 'McDonnell Douglas F-4 Phantom II',
+        country: 'Estados Unidos',
+        era: '1950s',
+        category: 'Caza polivalente',
+        image: countryImages['Estados Unidos'],
+        summary: 'Un aparato de gran tamaño que dejó una larga huella en la aviación del siglo XX.',
+    },
+    {
+        id: 'rafale',
+        name: 'Dassault Rafale',
+        country: 'Francia',
+        era: '1980s',
+        category: 'Caza polivalente',
+        image: countryImages.Francia,
+        summary: 'Un diseño contemporáneo de ala delta y planos canard, pensado para múltiples misiones.',
+    },
+]
