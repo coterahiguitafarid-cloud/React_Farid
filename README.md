@@ -1,73 +1,106 @@
-# Ala Siete — Archivo Aeronáutico
+# ✈️ Ala Siete — Archivo Aeronáutico
 
-Sitio web sobre historia, diseño e ingeniería de aeronaves militares. Está construido con React, React Router, Bootstrap y Vite. La sección **API** consulta la API pública de Rick y Morty y requiere conexión a internet.
+Proyecto web sobre historia, diseño e ingeniería de aeronaves militares, construido con React, Vite y Bootstrap.
 
-> Los formularios de acceso son demostrativos: no crean cuentas ni se conectan a un backend.
+> 🛩️ La sección de API consulta la API pública de Rick y Morty y requiere conexión a internet.
+>
+> 🔐 Los formularios de acceso son solo demostrativos y no conectan con backend real.
 
-## Requisitos
+## 🚀 Vista rápida
 
-- Node.js `20.19+` o `22.12+`.
-- npm.
+- Portada con contenido visual de aeronaves
+- Navegación por rutas con React Router
+- Sección de Props y datos estáticos
+- API con búsqueda y paginación
+- Tema claro/oscuro
+- Deploy preparado para GitHub Pages
 
-## Ejecutar en local
+## 🧩 Rutas principales
+
+| Ruta               | Descripción                              |
+| ------------------ | ---------------------------------------- |
+| `/`                | Portada y selección de aeronaves         |
+| `/props`           | Contenido de historias y diseño          |
+| `/api`             | Búsqueda de personajes de Rick and Morty |
+| `/login`           | Simulación de acceso                     |
+| `/register`        | Simulación de registro                   |
+| `/forgot-password` | Recuperación de contraseña               |
+
+## 🛠️ Requisitos
+
+- Node.js `20.19+` o `22.12+`
+- npm
+
+## ▶️ Ejecutar en local
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abre la dirección local que indique Vite (normalmente `http://localhost:5173/`).
+Luego abre la URL que indique Vite, normalmente:
 
-## Comandos
+```bash
+http://localhost:5173/
+```
 
-| Comando | Descripción |
-| --- | --- |
-| `npm run dev` | Inicia el servidor local con recarga automática. |
-| `npm run build` | Genera la versión de producción en `dist/`. |
-| `npm run preview` | Sirve la compilación localmente. |
-| `npm run lint` | Analiza el código con Oxlint. |
+## 📋 Comandos útiles
 
-## Secciones
+| Comando           | Descripción                           |
+| ----------------- | ------------------------------------- |
+| `npm run dev`     | Inicia el proyecto en modo desarrollo |
+| `npm run build`   | Genera la versión de producción       |
+| `npm run preview` | Sirve la build localmente             |
+| `npm run lint`    | Revisa el código con Oxlint           |
 
-| Ruta | Contenido |
-| --- | --- |
-| `/` | Portada y selección de aeronaves. |
-| `/props` | Historias sobre diseño, ingeniería y aviación. |
-| `/api` | Personajes de Rick y Morty con búsqueda por nombre y paginación. |
-| `/login` | Acceso de demostración. |
-| `/register` | Registro de demostración. |
-| `/forgot-password` | Recuperación de acceso de demostración. |
-
-El menú superior incluye Inicio, Props y API. El tema claro/oscuro conserva la selección en `localStorage`.
-La interfaz usa las clases y componentes de Bootstrap; no requiere una hoja de estilos propia.
-
-## Cambiar la imagen de ejemplo
-
-Las imágenes de la página de inicio están en `public/imagenes/`: `principal.jpg` se usa como portada; `estadosunidos.jpg`, `reinounido.jpg` y `union sovietica.jpg` se muestran en las tarjetas según el país de cada aeronave. Las tres imágenes redondas de Props son `avion-1.jpg`, `avion-2.jpg` y `avion-3.jpg`. Las imágenes de la sección API proceden del servicio de Rick y Morty.
-
-## Organización
+## 🗂️ Estructura del proyecto
 
 ```text
 public/
-└── imagenes/                    # Fotos de portada, países y Props
+└── imagenes/                  # Imágenes de portada y contenido
 src/
 ├── App.jsx
 ├── features/
-│   ├── access/components/       # Formularios de cuenta
+│   ├── access/components/     # Login, Register, ForgotPassword
 │   └── aviation/
-│       ├── components/         # Búsqueda y control de tema
-│       ├── data/               # Datos de aeronaves de la portada
-│       ├── layout/              # Navegación y pie de página
-│       └── pages/               # Portada, historias y API Rick y Morty
-├── shared/hooks/                # Preferencia de tema
+│       ├── components/        # SearchBar y ThemeToggle
+│       ├── data/              # Datos de aeronaves
+│       ├── layout/            # Header y Footer
+│       └── pages/             # Home, Stories y RickAndMorty
+├── shared/hooks/              # Tema claro/oscuro
+└── main.jsx
 ```
 
-## Tecnologías
+## 🎨 Tecnologías
 
-- React 19, React Router y Vite.
-- Bootstrap 5 para la cuadrícula, navegación, formularios, tarjetas y paginación.
-- API pública de Rick y Morty.
-- `vite-plugin-pwa` y Workbox.
-- Oxlint.
+- React 19
+- React Router
+- Vite
+- Bootstrap 5
+- PWA con `vite-plugin-pwa`
+- Oxlint
 
-El despliegue a GitHub Pages se configura en `.github/workflows/deploy.yml`; Vite detecta automáticamente el nombre del repositorio para construir las rutas de publicación.
+## 🌐 GitHub Pages
+
+La configuración de despliegue está en:
+
+- `.github/workflows/deploy.yml`
+- `vite.config.js`
+
+Vite detecta automáticamente el nombre del repositorio para construir las rutas correctas en GitHub Pages.
+
+## 🖼️ Cambiar imágenes
+
+Las imágenes de la portada y contenido se encuentran en `public/imagenes/`.
+
+Algunos ejemplos:
+
+- `principal.jpg` → portada principal
+- `avion-1.jpg`, `avion-2.jpg`, `avion-3.jpg` → sección de Props
+- El resto de imágenes se usan según la aeronave o la sección
+
+## 📝 Notas
+
+- El sitio incluye una preferencia de tema guardada en `localStorage`
+- La interfaz usa Bootstrap para estilos y componentes sin necesidad de hojas extra
+- La app está lista para desplegar en una GitHub Pages pública
