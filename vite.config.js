@@ -16,11 +16,17 @@ export default defineConfig({
 
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: {
+        enabled: false
+      },
 
       workbox: {
         globPatterns: [
           '**/*.{js,jsx,css,html,ico,png,svg,jpg,jpeg,webp}'
-        ]
+        ],
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
       },
 
       includeAssets: ['ala-siete.svg'],
